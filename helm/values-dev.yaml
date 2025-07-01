@@ -1,0 +1,3 @@
+depolyment:
+  imageURL: 905418383993.dkr.ecr.us-east-1.amazonaws.com/expense/backend
+  appversion: IMAGE_VERSION
