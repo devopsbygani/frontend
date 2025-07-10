@@ -1,7 +1,9 @@
 pipeline {
-    agent {
-        label 'AGENT-1'
-    }
+    // agent {
+    //     label 'AGENT-1'
+    // }
+    agent any
+    
     environment{
         appVersion = '' //global variable
         component = 'frontend'
@@ -43,10 +45,8 @@ pipeline {
                     helm upgrade --install frontend -n expense -f values-${environment}.yaml .
                     """
                     // sed i - replace in IMAGE_VERSION value with $appversion value , target file is values-dev.yaml
-
                 }
             }
-
            
         }
     }
